@@ -1,14 +1,27 @@
+$desktop: 64em; // 1024px
+$tablet: 48em;  // 768px
+$mobile: 30em;  // 480px
+
+$column-width: 30%; 
+
 .user-gallery {
   width: 100%;
 
-  > .items {
+  .items {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px; 
 
-    @media screen and (max-width: 480px) {
+    @media (max-width: $desktop) {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+
+    @media (max-width: $tablet) {
       grid-template-columns: 1fr;
+    }
+
+    .item {
+      width: calc(100% - 32px);
     }
   }
 
