@@ -40,7 +40,7 @@ const Gallery = ({ users }: GalleryProps) => {
     <div className="user-gallery">
       <div className="heading">
         <h1 className="title">Users</h1>
-        <Controls />
+        <Controls users={users} setUsersList={setUsersList} />
       </div>
       <div className="items">
         {usersList.map((user, index) => (
