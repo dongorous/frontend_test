@@ -3,8 +3,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
+}
+
+.main {
+  @media (min-width: 48em) {
+    padding: 6rem;
+  }
 }
 
 .description {
