@@ -19,11 +19,15 @@
   }
 
   > .info {
-    flex: 2 0 66%;
+    flex: 2 0 55%;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-flow: column nowrap;
+
+    > div{
+      word-break: break-word;
+    }
   }
 
   > .body + .info {
